@@ -6,6 +6,10 @@ pipeline {
         stage('Build') {
             steps {
                echo 'this is the build stage'
+                node('Node19.2'){
+                    sh 'npm init -y' 
+                }
+                
             }
         }
         stage('Test') {

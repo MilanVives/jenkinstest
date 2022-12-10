@@ -8,9 +8,10 @@ pipeline {
                echo 'this is the build stage'
                sh 'docker -v '
                 echo 'testing zithout sh' 
-                docker -v
                 node('Node19.2'){
                     sh 'npm init -y' 
+                    echo 'inside node'
+                    sh 'docker -v'
                 }
                 
             }

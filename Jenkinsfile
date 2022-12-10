@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                echo 'this is the build stage'
-               sh 'docker -v "
+               sh 'docker -v '
                 echo 'testing zithout sh' 
                 docker -v
                 node('Node19.2'){
